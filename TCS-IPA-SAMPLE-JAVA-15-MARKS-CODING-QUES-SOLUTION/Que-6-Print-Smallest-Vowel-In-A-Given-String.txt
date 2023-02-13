@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+
+public class Solution30
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        ArrayList<String> al = new ArrayList<>();
+        for (int i=0;i<s.length();i++)
+        {
+            if (String.valueOf(s.charAt(i)).equalsIgnoreCase("a")||String.valueOf(s.charAt(i)).equalsIgnoreCase("e")||String.valueOf(s.charAt(i)).equalsIgnoreCase("i")||String.valueOf(s.charAt(i)).equalsIgnoreCase("o")||String.valueOf(s.charAt(i)).equalsIgnoreCase("u"))
+            {
+                al.add(String.valueOf(s.charAt(i)));
+            }
+        }
+        String res = Collections.min(al);
+        System.out.println(res);
+    }
+}

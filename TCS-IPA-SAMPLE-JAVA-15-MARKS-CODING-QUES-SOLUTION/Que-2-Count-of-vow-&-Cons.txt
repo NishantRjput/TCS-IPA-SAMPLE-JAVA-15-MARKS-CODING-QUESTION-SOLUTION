@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+
+public class Solution30
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+       String s=sc.nextLine();
+       int vowelCount=0;
+       int consCount=0;
+       for (int i=0;i<s.length();i++)
+       {
+           if (s.codePointAt(i)>=65&&s.codePointAt(i)<=90 || s.codePointAt(i)>=97&&s.codePointAt(i)<=122)
+           {
+               if (String.valueOf(s.charAt(i)).equalsIgnoreCase("a")||String.valueOf(s.charAt(i)).equalsIgnoreCase("e")||String.valueOf(s.charAt(i)).equalsIgnoreCase("i")||String.valueOf(s.charAt(i)).equalsIgnoreCase("o")||String.valueOf(s.charAt(i)).equalsIgnoreCase("u"))
+               {
+                   vowelCount=vowelCount+1;
+               }
+               else
+               {
+                   consCount=consCount+1;
+               }
+           }
+       }
+        System.out.println("Vowels count - "+vowelCount);
+        System.out.println("Consonants count - "+consCount);
+    }
+}
